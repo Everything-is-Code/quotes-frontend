@@ -8,4 +8,8 @@ COPY package.json /quotes-frontend/
 
 RUN npm install
 
+RUN chmod -R 775 /quotes-frontend
+
+EXPOSE 5173
+
 CMD ["npm", "run", "dev"]
