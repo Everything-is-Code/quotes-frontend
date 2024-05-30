@@ -8,7 +8,7 @@ function App() {
 
     useEffect(() => {
         fetch('http://quotes-backend.quotes.svc.cluster.local/hello/greeting/quote', {
-          mode: 'cors',  
+          mode: 'no-cors',  
           method: 'GET',  
           headers: {
                 'Access-Control-Allow-Origin': '*',
