@@ -1,14 +1,13 @@
-FROM node:18-alpine
+FROM node
 
-WORKDIR /quotes-frontend
+WORKDIR /app
 
-COPY public/ /quotes-frontend/public
-COPY src/ /quotes-frontend/src
-COPY package.json /quotes-frontend/
+COPY package.json .
+RUN npm i
 
-RUN npm install
+COPY . .
 
-RUN chmod -R 775 /quotes-frontend
+## EXPOSE [Port you mentioned in the vite.config file]
 
 EXPOSE 5173
 
