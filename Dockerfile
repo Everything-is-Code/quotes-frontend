@@ -9,6 +9,8 @@ COPY . .
 
 
 RUN chmod -R 775 .
+RUN chmod -R 775 /app
+RUN chmod -R 775 ./*
 
 ## EXPOSE [Port you mentioned in the vite.config file]
 
