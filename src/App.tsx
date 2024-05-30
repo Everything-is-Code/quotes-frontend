@@ -8,10 +8,12 @@ function App() {
 
     useEffect(() => {
         fetch('https://quotes-backend-quotes.apps.cluster-lz7k2.dynamic.redhatworkshops.io/hello/greeting/quote', {
-            headers: {
+          mode: 'cors',    
+          headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
                 'Access-Control-Allow-Headers': 'Content-Type',
+                'Content-Type':'application/json',
             },
         })
             .then(response => response.text())
