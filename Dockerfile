@@ -7,6 +7,9 @@ RUN npm i
 
 COPY . .
 
+
+RUN chmod -R 775 .
+
 ## EXPOSE [Port you mentioned in the vite.config file]
 
 EXPOSE 5173
