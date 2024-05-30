@@ -9,13 +9,7 @@ function App() {
     useEffect(() => {
         fetch('http://quotes-backend.quotes.svc.cluster.local/hello/greeting/quote', {
           mode: 'no-cors',  
-          method: 'GET',  
-          headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Content-Type':'application/json',
-            }
+          method: 'GET'
         })
             .then(response => response.text())
             .then(data => setQuote(data))
