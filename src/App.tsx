@@ -5,9 +5,11 @@ import './App.css'
 function App() {
     const [count, setCount] = useState(0)
     const [quote, setQuote] = useState('');
+  
+    console.log(import.meta.env.VITE_BACKEND_URL);
 
     useEffect(() => {
-      fetch('http://quotes-backend.quotes-backend.svc.cluster.local/hello/greeting/quote')
+      fetch(import.meta.env.VITE_BACKEND_URL)
             .then(response => response.text())
             .then(data => setQuote(data))
             .catch(error => console.log(error));
