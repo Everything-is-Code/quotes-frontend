@@ -7,10 +7,7 @@ function App() {
     const [quote, setQuote] = useState('');
 
     useEffect(() => {
-        fetch('http://quotes-backend.quotes.svc.cluster.local/hello/greeting/quote', {
-          mode: 'no-cors',  
-          method: 'GET'
-        })
+      fetch('http://quotes-backend.quotes-backend.svc.cluster.local/hello/greeting/quote')
             .then(response => response.text())
             .then(data => setQuote(data))
             .catch(error => console.log(error));
