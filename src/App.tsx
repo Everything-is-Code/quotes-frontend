@@ -6,8 +6,8 @@ function App() {
     const [count, setCount] = useState(0)
     const [quote, setQuote] = useState('');
 
-    console.log(import.meta.env.VITE_BACKEND_URL);
-    console.log(import.meta.env.BACKEND_URL);
+    console.log("VITE_BACKEND_URL: " + import.meta.env.VITE_BACKEND_URL);
+    console.log("BACKEND_URL: " + import.meta.env.BACKEND_URL);
     
     useEffect(() => {
       fetch(import.meta.env.VITE_BACKEND_URL)
