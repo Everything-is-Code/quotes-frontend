@@ -7,6 +7,7 @@ function App() {
     const [quote, setQuote] = useState('');
 
     console.log(import.meta.env.VITE_BACKEND_URL);
+    console.log(import.meta.env.BACKEND_URL);
     
     useEffect(() => {
       fetch(import.meta.env.VITE_BACKEND_URL)
