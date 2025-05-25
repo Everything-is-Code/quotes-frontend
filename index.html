@@ -1,14 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/quote.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>Quotes App</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/quote.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>Quotes App - Welcome!</title>
+  <style>
+    body {
+      background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      color: #0000cc;
+      text-align: center;
+    }
+    h1 {
+      color: #ff0000;
+      text-shadow: 2px 2px #ffff00;
+    }
+    .content {
+      border: 5px double #ff69b4;
+      background-color: #f0f8ff;
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    marquee {
+      color: #008000;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .footer {
+      font-size: 12px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="alternate">🚀 Welcome to the Quotes App! ✨</marquee>
+
+  <h1>Quotes App</h1>
+
+  <div class="content">
+    <p>Get your daily dose of wisdom, 90s style! 🎉</p>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  </div>
+
+  <div class="footer">
+    <p>Best viewed in Netscape Navigator 4.0 or Internet Explorer 5</p>
+    <img src="https://www.gifgif.de/web/buttons/netscape.gif" alt="Netscape" />
+    <img src="https://www.gifgif.de/web/buttons/ie_best.gif" alt="Internet Explorer" />
+  </div>
+
+  <script type="module" src="/src/main.tsx"></script>
+</body>
 </html>
