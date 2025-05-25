@@ -6,8 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Quotes App</title>
+
+      <!-- Favicon (quote icon) -->
+    <link rel="icon" type="image/png" href="https://img.icons8.com/ios-filled/50/quote-left.png" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html, body {
+        height: 100%;
+        font-family: 'Inter', sans-serif;
+        background: #121212;
+        color: #ffffff;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-image {
+        max-width: 180px;
+        margin-bottom: 1rem;
+      }
+
+      footer {
+        font-size: 0.8rem;
+        margin-top: 1rem;
+      }
+    </style>
   </head>
   <body>
+    <!-- Quotes Hero Image -->
+    <img src="https://img.icons8.com/ios-filled/150/ffffff/quote-left.png" alt="Quotes Icon" class="hero-image" />
+
+    <div id="root"></div>
+
+    <footer>
+      &copy; 2025 Quotes App. Inspire Daily.
+    </footer>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
