@@ -11,28 +11,78 @@
       background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
       font-family: "Comic Sans MS", cursive, sans-serif;
       color: #0000cc;
-      text-align: center;
-    }
-    h1 {
-      color: #ff0000;
-      text-shadow: 2px 2px #ffff00;
-    }
-    .content {
-      border: 5px double #ff69b4;
-      background-color: #f0f8ff;
-      width: 80%;
-      margin: 0 auto;
+      margin: 0;
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+
     marquee {
+      width: 100%;
+      max-width: 700px;
       color: #008000;
       font-weight: bold;
       font-size: 18px;
+      border: 3px inset #ff69b4;
+      padding: 10px;
+      background-color: #fff0f6;
+      margin-bottom: 20px;
     }
+
+    h1 {
+      color: #ff0000;
+      text-shadow: 2px 2px #ffff00;
+      margin: 10px 0 20px;
+    }
+
+    .content {
+      border: 5px double #ff69b4;
+      background-color: #f0f8ff;
+      width: 90%;
+      max-width: 700px;
+      padding: 20px;
+      box-sizing: border-box;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
     .footer {
+      text-align: center;
       font-size: 12px;
-      margin-top: 30px;
+      color: #4444aa;
+      text-shadow: 1px 1px #ffcc00;
+      margin-top: 20px;
     }
+
+    .footer p {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .footer .icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer img {
+      border: 2px groove #ff69b4;
+      background-color: #fff0f6;
+      padding: 4px;
+      width: 60px;
+    }
+    
+    .footer p {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: black;
+      text-shadow: 1px 1px 2px #ffcc00;
+      margin-bottom: 10px;
+    }
+
+
   </style>
 </head>
 <body>
@@ -48,8 +98,9 @@
 
   <div class="footer">
     <p>Best viewed in Netscape Navigator 4.0 or Internet Explorer 5</p>
-    <img src="https://www.gifgif.de/web/buttons/netscape.gif" alt="Netscape" />
-    <img src="https://www.gifgif.de/web/buttons/ie_best.gif" alt="Internet Explorer" />
+    <div class="icons">
+      <img src="src/assets/netscape_icon.png" alt="Netscape Navigator" />
+      <img src="src/assets/internet_explorer_icon.png" alt="Internet Explorer" />   </div>
   </div>
 
   <script type="module" src="/src/main.tsx"></script>

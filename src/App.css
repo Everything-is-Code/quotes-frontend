@@ -40,3 +40,47 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Base button styling */
+button {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  box-shadow: 2px 2px 0px #000;
+}
+
+/* New Quote button – retro yellow + blue */
+.btn {
+  background-color: #33ff00;
+  color: #0000cc;
+  border: 3px outset #ff69b4;
+}
+
+.btn:hover {
+  background-color: #ffff66;
+  transform: translateY(1px);
+}
+
+.btn:active {
+  border: 3px inset #ff69b4;
+  background-color: #ffee00;
+}
+
+/* Count button – teal + magenta */
+.card button {
+  background-color: #42ffff;
+  color: #ff00ff;
+  border: 3px outset #ff00ff;
+}
+
+.card button:hover {
+  background-color: #a1ecec;
+  transform: translateY(1px);
+}
+
+.card button:active {
+  border: 3px inset #ff00ff;
+  background-color: #33eeee;
+}
