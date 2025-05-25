@@ -1,42 +1,110 @@
+/* Root container */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ddd;
+  background-color: #121212;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+}
+
+/* Dark mode container */
+.app-container.dark-mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Logo tweaks for dark mode */
+.logo {
+  height: 5.5rem;
+  margin-bottom: 0.5rem;
+  transition: filter 300ms ease;
+  cursor: pointer;
+  filter: drop-shadow(0 0 5px #61dafbcc);
+}
+.logo:hover {
+  filter: drop-shadow(0 0 15px #61dafbff);
+}
+
+/* Title */
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #61dafb;
+  margin: 0;
+}
+
+/* Quote card */
+.quote-card {
+  background: #1e1e1e;
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(97, 218, 251, 0.3);
+  max-width: 600px;
+  width: 100%;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Quote text */
+.quote-text {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #ccc;
+  margin-bottom: 2rem;
+  min-height: 4.5rem;
+  line-height: 1.4;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Button */
+.fetch-button {
+  background-color: #61dafb;
+  color: #121212;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(97, 218, 251, 0.6);
+  transition: background-color 200ms ease, box-shadow 200ms ease;
+}
+
+.fetch-button:hover {
+  background-color: #21a1f1;
+  box-shadow: 0 6px 18px rgba(33, 161, 241, 0.8);
+}
+
+.fetch-button:active {
+  background-color: #1784c3;
+  box-shadow: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  #root {
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .quote-card {
+    padding: 1.5rem 2rem;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .quote-text {
+    font-size: 1.25rem;
   }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  h1 {
+    font-size: 2rem;
+  }
 }

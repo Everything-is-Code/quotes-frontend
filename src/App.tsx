@@ -1,34 +1,45 @@
 import { useEffect, useState } from 'react';
-import reactLogo from './assets/react.svg'
-import './App.css'
+import reactLogo from './assets/react.svg';
+import './App.css';
 
 function App() {
-    const [count, setCount] = useState(0)
-    const [quote, setQuote] = useState('');
-    
-    useEffect(() => {
-      fetch(import.meta.env.VITE_BACKEND_URL)
-            .then(response => response.text())
-            .then(data => setQuote(data))
-            .catch(error => console.log(error));
-    }, []);
+  const [quote, setQuote] = useState('');
 
-    return (
-    <>
-      <div>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+  const fetchQuote = () => {
+    fetch(import.meta.env.VITE_BACKEND_URL)
+      .then((response) => response.text())
+      .then((data) => setQuote(data))
+      .catch((error) => console.log(error));
+  };
+
+  useEffect(() => {
+    fetchQuote();
+  }, []);
+
+  return (
+    <div className="app-container dark-mode">
+      <header className="header">
+        <a href="https://react.dev" target="_blank" rel="noopener noreferrer">
+          <img src={reactLogo} className="logo" alt="React logo" />
         </a>
-      </div>
-      <h1>Random Quote:</h1>
-        <p>{quote}</p>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <h1>Random Quote</h1>
+      </header>
+
+      <main className="quote-container">
+        {quote ? (
+          <blockquote className="quote-text">"{quote}"</blockquote>
+        ) : (
+          <p className="loading-text">Loading...</p>
+        )}
+      </main>
+
+      <footer>
+        <button className="btn" onClick={fetchQuote} aria-label="Fetch new quote">
+          🔄 New Quote
         </button>
-      </div>
-     </>
-    );
+      </footer>
+    </div>
+  );
 }
 
 export default App;

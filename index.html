@@ -2,56 +2,100 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/quote.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://img.icons8.com/ios-filled/50/quote-left.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     <title>Quotes App</title>
 
-      <!-- Favicon (quote icon) -->
-    <link rel="icon" type="image/png" href="https://img.icons8.com/ios-filled/50/quote-left.png" />
-
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
+      /* Reset and base */
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
-      html, body {
+      html,
+      body {
         height: 100%;
         font-family: 'Inter', sans-serif;
-        background: #121212;
-        color: #ffffff;
+        background: linear-gradient(135deg, #121212 0%, #1f1f1f 100%);
+        color: #e0e0e0;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
         text-align: center;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        padding: 2rem 1rem;
       }
 
+      /* Hero image */
       .hero-image {
-        max-width: 180px;
-        margin-bottom: 1rem;
+        width: 120px;
+        height: auto;
+        margin-bottom: 1.5rem;
+        filter: drop-shadow(0 0 8px #61dafbcc);
+        transition: filter 0.3s ease;
+      }
+      .hero-image:hover {
+        filter: drop-shadow(0 0 16px #61dafbff);
+        cursor: pointer;
       }
 
+      /* Root app container */
+      #root {
+        width: 100%;
+        max-width: 900px;
+      }
+
+      /* Footer */
       footer {
-        font-size: 0.8rem;
-        margin-top: 1rem;
+        margin-top: 3rem;
+        font-size: 0.85rem;
+        color: #888;
+        user-select: none;
+        letter-spacing: 0.05em;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+      }
+
+      @media (max-width: 480px) {
+        .hero-image {
+          width: 90px;
+          margin-bottom: 1rem;
+        }
+
+        footer {
+          font-size: 0.75rem;
+          margin-top: 2rem;
+        }
       }
     </style>
   </head>
   <body>
     <!-- Quotes Hero Image -->
-    <img src="https://img.icons8.com/ios-filled/150/ffffff/quote-left.png" alt="Quotes Icon" class="hero-image" />
+    <img
+      src="https://img.icons8.com/ios-filled/150/61dafb/quote-left.png"
+      alt="Quotes Icon"
+      class="hero-image"
+      title="Quotes App"
+    />
 
     <div id="root"></div>
 
-    <footer>
-      &copy; 2025 Quotes App. Inspire Daily.
-    </footer>
-    <div id="root"></div>
+    <footer>&copy; 2025 Quotes App. Inspire Daily.</footer>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
