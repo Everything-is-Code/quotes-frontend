@@ -1,0 +1,14 @@
+[Unit]
+Description=Quotes App (Vite + Node.js)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/jboss/Git/quotes-frontend
+ExecStart=/usr/bin/npm run dev
+Restart=on-failure
+User=jboss
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
